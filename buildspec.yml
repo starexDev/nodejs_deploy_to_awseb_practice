@@ -24,7 +24,8 @@ phases:
 # Include only the files required for your application to run.
 artifacts:
   files:
+    - .env
     - node_modules/**/*
     - package-lock.json
     - package.json
-    - server.js
+    - server.js    

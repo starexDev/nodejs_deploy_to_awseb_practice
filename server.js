@@ -2,8 +2,12 @@ const express = require('express');
 require('dotenv').config()
 const nodemailer = require("nodemailer");
 
+const emailValidationRoute = require("./Routes/Validation/email_validation");
+
 const app = express();
 const port = process.env.PORT || 8080;
+
+app.use("/validation", emailValidationRoute);
 
 app.get('/', (req, res) => {
     res.send(`Hello World! ${process.env.PORT}`);

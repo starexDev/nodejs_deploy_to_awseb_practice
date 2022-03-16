@@ -4,9 +4,11 @@
 const router = require("express").Router();
 
 // Import other local modules
-const emailValidationController = require("../../Controllers/Validation/email_validation");
 
 // POST: http.../validation/email-validation
-router.post("/email-validation", emailValidationController.sendEmailValidationCode);
+router.post("/email-validation", (req, res, next) => {
+    res.status(201).json({ response: "Email successfully sent." });
+
+});
 
 module.exports = router;

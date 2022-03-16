@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/starexDev/nodejs_deploy_to_awseb_practice#readme",
   "dependencies": {
+    "app-module-path": "^2.2.0",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "nodemailer": "^6.7.2"

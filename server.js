@@ -1,8 +1,12 @@
+// ***IMPORTANT**: The following line should be added to the very
+//                 beginning of your main script!
+require('app-module-path').addPath(__dirname);
+
 const express = require('express');
 require('dotenv').config()
 const nodemailer = require("nodemailer");
 
-const emailValidationRoute = require("./Routes/Validation/email_validation.js");
+const emailValidationRoute = require("Routes/Validation/email_validation");
 
 const app = express();
 const port = process.env.PORT || 8080;

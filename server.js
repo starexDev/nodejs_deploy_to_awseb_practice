@@ -2,7 +2,7 @@ const express = require('express');
 require('dotenv').config()
 const nodemailer = require("nodemailer");
 const simpleFunc = require("./simple_func");
-
+simpleFunc.counts();
 const app = express();
 const port = process.env.PORT || 8080;
 
@@ -11,7 +11,6 @@ app.get('/', (req, res) => {
 })
 
 app.post('/test', (req, res) => {
-    simpleFunc.call();
     res.status(200).json({
         envport: `${process.env.PORT}`,
         port: port
